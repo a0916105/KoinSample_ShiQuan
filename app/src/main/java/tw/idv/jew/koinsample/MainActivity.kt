@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel.check()
+//        viewModel.check()
+        println(viewModel.doSomething())
 
         val honeyLemonade2 = get<HoneyLemonade>()
 //        val honeyLemonade3: HoneyLemonade = get()

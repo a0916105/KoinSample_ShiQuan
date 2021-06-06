@@ -30,5 +30,6 @@ val myModule = module {
     factory<Lemon>(named("Lyme")) { Lyme() }
 
     single { Bee() }
-    viewModel { MainViewModel(get()) }
+//    viewModel { MainViewModel(get()) }
+    viewModel { MainViewModel() }
 }
