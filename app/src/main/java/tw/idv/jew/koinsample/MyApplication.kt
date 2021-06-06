@@ -1,6 +1,7 @@
 package tw.idv.jew.koinsample
 
 import android.app.Application
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
 
@@ -20,4 +21,5 @@ val myModule = module {
     factory { Honey(get()) }
     factory { Lemon() }
     single { Bee() }
+    viewModel { MainViewModel(get()) }
 }
