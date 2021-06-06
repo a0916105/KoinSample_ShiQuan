@@ -6,4 +6,6 @@ class Honey(val bee: Bee)
 
 class Bee
 
-class Lemon
+open class Lemon
+
+class Lyme : Lemon()

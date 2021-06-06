@@ -6,6 +6,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.qualifier.named
 
 class MainActivity : AppCompatActivity() {
     private val honeyLemonade by inject<HoneyLemonade>()
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         viewModel.check()
 
         val honeyLemonade2 = get<HoneyLemonade>()
-        val honeyLemonade3: HoneyLemonade = get()
+//        val honeyLemonade3: HoneyLemonade = get()
+        val honeyLemonade3: HoneyLemonade = get(named("Lyme"))
 
         textView.text = honeyLemonade.toString() + "\n" +
                         honeyLemonade2.toString() + "\n" +
